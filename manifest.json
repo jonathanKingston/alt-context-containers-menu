@@ -1,0 +1,28 @@
+{
+  "permissions": [
+    "tabs",
+    "cookies",
+    "<all_urls>",
+    "contextualIdentities"
+  ],
+  "description": "Context menu for containers",
+  "homepage_url": "https://github.com/jonathanKingston/alt-context-containers-menu",
+  "manifest_version": 2,
+  "name": "In content context menu",
+  "version": "1.0.2",
+  "icons": {
+    "96": "containers.svg"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
